@@ -57,6 +57,11 @@ ideas **(DEFAULT: `stable-2.11`)**
 
 A container image spawned by `ansible-test` **(OPTIONAL)**
 
+If not set, `ansible-test` will run the default docker image which is suitable
+for testing with distinct `target-python-version`.
+
+**WARNING:** `docker-image` and `target-python-version` are mutually exclusives.
+
 
 ### `pre-test-cmd`
 
@@ -76,6 +81,10 @@ Controller Python version **(DEFAULT: `3.9`)**
 ### `target-python-version`
 
 Target Python version **(OPTIONAL)**
+
+If not set, `ansible-test` will run with the python from the docker image.
+
+**WARNING:** `docker-image` and `target-python-version` are mutually exclusives.
 
 
 ### `testing-type`
